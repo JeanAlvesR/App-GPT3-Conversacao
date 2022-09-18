@@ -6,7 +6,7 @@ print('\n\n -------------------------- Programa que gera o que você pedir -----
 
 while True:
 
-  entrada = input('O que você quer??\nR: ')
+  entrada = input('Humano: ')
 
   try:
     response = openai.Completion.create(
@@ -18,6 +18,6 @@ while True:
       frequency_penalty=0.0,
       presence_penalty=0.0
     )
-    print(response['choices'][0]['text']+'\n\n-----------Nova Pergunta ----------\n\n')
+    print('\nIA: '+response['choices'][0]['text'].strip()+'\n')
   except Exception:
     print('Não deu certo')
