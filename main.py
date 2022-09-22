@@ -33,7 +33,8 @@ def marquinhos_fala(entrada):
     marquinhos.runAndWait()
 
 def verifica_se_quer_voz(x: str = "não"):
-    x = input("Gostaria de utilizar o comando de voz? (sim/não)\nR: ")
+    x = input("\033[0;31mGostaria de utilizar o comando de voz? (sim/não)\nR:\033[m ")
+    teste_saida(x)
     if x.lower() == "nao" or x.lower() == "não":
         return False
     elif x.lower() == "sim":
