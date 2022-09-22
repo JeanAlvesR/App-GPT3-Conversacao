@@ -12,7 +12,7 @@ def pergunta_ai(entrada):
   try:
     response = openai.Completion.create(
       model="text-davinci-002",
-      prompt=entrada + '. responda em Português',
+      prompt=entrada + '. Responda em Português',
       temperature=0.5,
       max_tokens=500,
       top_p=1.0,
